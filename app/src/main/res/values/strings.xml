@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Hishab</string>
+    <string name="amount">Expense Amount</string>
+    <string name="note">Remark</string>
+</resources>
