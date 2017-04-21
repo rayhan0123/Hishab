@@ -2,4 +2,16 @@
     <string name="app_name">Hishab</string>
     <string name="amount">Expense Amount</string>
     <string name="note">Remark</string>
+    <string name="save">Save</string>
+
+    <string-array name="expense_type">
+        <item>Select Expense Type</item>
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Hotel Bill</item>
+        <item>Phone Bill</item>
+        <item>Transportation</item>
+
+    </string-array>
+
 </resources>
