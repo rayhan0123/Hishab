@@ -4,7 +4,7 @@ package com.mrexray.www.hishab.add_new;
  * Created by Ray on 4/22/2017.
  */
 
-public interface Contract {
+public interface ContractAddNew {
     interface presenterInterface {
 
     }

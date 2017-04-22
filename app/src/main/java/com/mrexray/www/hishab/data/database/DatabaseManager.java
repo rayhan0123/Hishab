@@ -8,10 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
  */
 
 public class DatabaseManager {
-    Context context;
-    DatabaseHelper helper;
-    SQLiteDatabase database;
-
+    private Context context;
+    private DatabaseHelper helper;
+    private SQLiteDatabase database;
 
 
     public DatabaseManager(Context context) {

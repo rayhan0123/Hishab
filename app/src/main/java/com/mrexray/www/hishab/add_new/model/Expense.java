@@ -8,23 +8,23 @@ import java.util.Date;
 
 public class Expense {
     private int expenseId;
-    private int userinfoId;
+    private int userInfoId;
     private int expenseTypeId;
     private float expenseAmount;
     private String remark;
     private Date date;
 
-    public Expense(int expenseId, int userinfoId, int expenseTypeId, float expenseAmount, String remark, Date date) {
+    public Expense(int expenseId, int userInfoId, int expenseTypeId, float expenseAmount, String remark, Date date) {
         this.expenseId = expenseId;
-        this.userinfoId = userinfoId;
+        this.userInfoId = userInfoId;
         this.expenseTypeId = expenseTypeId;
         this.expenseAmount = expenseAmount;
         this.remark = remark;
         this.date = date;
     }
 
-    public Expense(int userinfoId, int expenseTypeId, float expenseAmount, String remark, Date date) {
-        this.userinfoId = userinfoId;
+    public Expense(int userInfoId, int expenseTypeId, float expenseAmount, String remark, Date date) {
+        this.userInfoId = userInfoId;
         this.expenseTypeId = expenseTypeId;
         this.expenseAmount = expenseAmount;
         this.remark = remark;
@@ -39,12 +39,12 @@ public class Expense {
         this.expenseId = expenseId;
     }
 
-    public int getUserinfoId() {
-        return userinfoId;
+    public int getUserInfoId() {
+        return userInfoId;
     }
 
-    public void setUserinfoId(int userinfoId) {
-        this.userinfoId = userinfoId;
+    public void setUserInfoId(int userInfoId) {
+        this.userInfoId = userInfoId;
     }
 
     public int getExpenseTypeId() {
