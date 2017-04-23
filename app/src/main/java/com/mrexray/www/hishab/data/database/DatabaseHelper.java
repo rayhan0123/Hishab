@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by Ray on 4/21/2017.
  */
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+ class DatabaseHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "hishab_db";
     public static final int DATABASE_VERSION = 1;
@@ -33,6 +33,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String TABLE_EXPENSE_TYPE = "expenseType";
     public static final String EXPENSE_TYPE_ID = "expenseTypeId";
     public static final String EXPENSE_TYPE_NAME = "expenseTypeName";
+
+    public static final String TABLE_EXPORTED="exported";
+    public static  final String EXPORT_ID= "exportId";
+    public static  final String EXPORT_DATE= "exportDate";
+
 
     private static final String CREATE_USER_INFO_TABLE =
             " CREATE TABLE " + TABLE_USER_INFO + " ( "
@@ -61,6 +66,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     + USER_INFO_ID + "INTEGER NOT NULL, "
                     + EXPENSE_TYPE_NAME + " TEXT NOT NULL )";
 
+    private static final String CREATE_EXPORTED_TABLE =
+            " CREATE TABLE " + TABLE_EXPORTED + " ( "
+                    + EXPORT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + EXPENSE_ID + "INTEGER NOT NULL, "
+                    + EXPORT_DATE + " TEXT NOT NULL )";
+
+
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -71,6 +83,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_EXPENSE_TYPE_TABLE);
         db.execSQL(CREATE_EXPENSE_TABLE);
         db.execSQL(CREATE_USER_INFO_TABLE);
+        db.execSQL(CREATE_EXPORTED_TABLE);
 
     }
 

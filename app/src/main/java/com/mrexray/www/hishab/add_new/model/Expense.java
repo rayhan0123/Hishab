@@ -1,7 +1,5 @@
 package com.mrexray.www.hishab.add_new.model;
 
-import java.util.Date;
-
 /**
  * Created by Ray on 4/21/2017.
  */
@@ -12,9 +10,9 @@ public class Expense {
     private int expenseTypeId;
     private float expenseAmount;
     private String remark;
-    private Date date;
+    private String date;
 
-    public Expense(int expenseId, int userInfoId, int expenseTypeId, float expenseAmount, String remark, Date date) {
+    public Expense(int expenseId, int userInfoId, int expenseTypeId, float expenseAmount, String remark, String date) {
         this.expenseId = expenseId;
         this.userInfoId = userInfoId;
         this.expenseTypeId = expenseTypeId;
@@ -23,7 +21,7 @@ public class Expense {
         this.date = date;
     }
 
-    public Expense(int userInfoId, int expenseTypeId, float expenseAmount, String remark, Date date) {
+    public Expense(int userInfoId, int expenseTypeId, float expenseAmount, String remark, String date) {
         this.userInfoId = userInfoId;
         this.expenseTypeId = expenseTypeId;
         this.expenseAmount = expenseAmount;
@@ -71,11 +69,11 @@ public class Expense {
         this.remark = remark;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
